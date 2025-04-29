@@ -1,8 +1,10 @@
+const cors = require('cors');
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware to parse JSON
+app.use(cors()); // 👈 NEW line
 app.use(express.json());
 
 // Dummy menu
